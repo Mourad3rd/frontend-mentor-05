@@ -1,0 +1,133 @@
+:root {
+    --Very-dark-blue : hsl(233, 47%, 7%);
+    --Dark-desaturated-blue : hsl(244, 38%, 16%);
+    --Soft-violet : hsl(277, 64%, 61%);
+    --Slightly-transparent-white : hsla(0, 0%, 100%, 0.75);
+    --main-font-size : 15px;
+    --font-family-inter : 'Inter',sans-serif;
+    --font-family-lexend : 'Lexend Deca',sans-serif;
+    --main-margin : 1em;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very-dark-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1020px;
+    background-color: var(--Dark-desaturated-blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+
+picture {
+    position: relative;
+}
+
+picture::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(85 0 124 / 50%);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+
+h1 {
+    color: white;
+    font-family: var(--font-family-inter);
+    margin-bottom: var(--main-margin);
+    font-size: 36px;
+}
+
+h1 span {
+    color: var(--Soft-violet);
+}
+
+.left p {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-bottom: 4em;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.info {
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: var(--font-family-inter);
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    margin-left: -35px;
+}
+
+.info span {
+    position: relative;
+}
+
+.info span:nth-child(1)::after {
+    content: "companies";
+    position: absolute;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: var(--font-family-lexend);
+    top: 30px;
+    right: -23px;
+    letter-spacing: 2px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.info span:nth-child(2)::after {
+    content: "templates";
+    position: absolute;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: var(--font-family-lexend);
+    top: 30px;
+    right: -35px;
+    letter-spacing: 2px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.info span:nth-child(3)::after {
+    content: "queries";
+    position: absolute;
+    font-size: 10px;
+    font-weight: normal;
+    font-family: var(--font-family-lexend);
+    top: 30px;
+    right: 0;
+    letter-spacing: 2px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
